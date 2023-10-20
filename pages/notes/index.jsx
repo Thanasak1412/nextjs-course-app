@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
 import Link from "next/link";
 
 export default () => {
@@ -21,7 +19,7 @@ export default () => {
       >
         {notes.map((note) => (
           <div key={note.id} sx={{ width: "33%", p: 2 }}>
-            <Link key={note.id} href="/notes/[id]" as={`/notes/${note.id}`}>
+            <Link key={note.id} href="/notes/[id]" as={`/notes/${note.id}`} legacyBehavior>
               <a sx={{ textDecoration: "none", cursor: "pointer" }}>
                 <div sx={{ variant: "containers.card" }}>
                   <strong>{note.title}</strong>
